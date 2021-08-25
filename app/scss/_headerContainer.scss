@@ -1,0 +1,34 @@
+.container {
+  display: grid;
+
+  padding: 0;
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-rows: 5.2fr;
+  grid-template-areas:
+    "hero hero hero";
+  
+}
+
+
+.hero {
+  display: grid;
+
+  justify-content: center;
+  align-content: center;
+  background-image: url('/images/bg-container.jpg');
+  grid-area: hero;
+  text-align: center;
+  min-height: 45rem;
+
+  h2 {
+    color: $white;
+    margin-top: 0;
+    margin-bottom: 0.625rem;
+  }
+
+  p {
+    color: $white;
+    margin-top: 0;
+    margin-bottom: 100px;
+  }
+}

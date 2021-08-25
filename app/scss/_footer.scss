@@ -1,0 +1,40 @@
+.footer{
+    background-color: $darkBrown;
+    text-align: center;
+
+    &__socialmedia{
+        color: $white;
+        text-align: center;
+        
+        p{
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .socialicons{
+            height: 30px;
+            width: 30px;
+            margin-top: 1.875rem;
+            filter: grayscale(100%);
+        }
+
+        .socialicons:hover{
+            filter: none;
+            filter: grayscale(0);
+        }
+
+    }
+
+    .rocket{
+        margin-top: 1.25rem;
+        text-align: center;
+
+        .rocketicon{
+            height: 50px;
+            width: 50px;
+        }
+    }
+
+   
+    
+}

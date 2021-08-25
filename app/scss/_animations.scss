@@ -1,0 +1,63 @@
+.has-slide{
+    visibility: hidden;
+}
+
+@keyframes slide-in{
+    from{
+        visibility: hidden;
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    1%{
+        visibility: visible;
+        opacity: 0;
+    }
+    to{
+        visibility: visible;
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.slide-in{
+    animation: slide-in 0.3s ease-in-out forwards;
+}
+
+@keyframes slide-out{
+    from{
+        visibility: visible;
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    99%{
+        visibility: visible;
+        opacity: 0;
+    }
+    to{
+        visibility: hidden;
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+.slide-out{
+    animation: slide-out 0.3s ease-in-out forwards;
+}
+
+
+.cogSmall{
+    animation-name: spin;
+    animation-duration: 400ms;
+    animation-timing-function: cubic-bezier;
+    transform-origin: center;
+    animation-play-state: paused;
+}
+
+@keyframes spin{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}

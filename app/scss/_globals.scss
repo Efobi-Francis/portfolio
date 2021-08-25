@@ -1,0 +1,59 @@
+@import "mixins";
+
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*,*::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0 auto;
+    position: relative;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    color: $grayishBrown;
+    overflow-x: hidden;
+    font-weight: 300;
+    line-height: 1.42857143;
+
+    &.noscroll{
+        overflow: hidden;
+    }
+
+}
+
+a, a:visited, a:hover{
+    text-decoration: none;
+}
+
+//spacing
+.contain{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.container{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+
+//visibility
+.hide-for-mobile{
+    //hide for tablet and mobile
+   @include breakpoint-down(small){
+       display: none;
+   } 
+}
+
+.hide-for-desktop{
+    //hide for desktop viewport widths
+    @include breakpoint-up(medium){
+        display: none;
+    }
+}

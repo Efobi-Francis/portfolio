@@ -1,0 +1,362 @@
+@import "animations";
+
+.main{
+
+    &__about{
+        @media (max-width: 500px){
+            padding: 60px 10px 60px 10px;
+        }
+        display: block;
+        text-align: center;
+        color: $black;
+        padding-top: 90px;
+        padding-bottom: 100px;
+
+        h4{
+            margin-top: 0px;
+            margin-bottom: 1.875rem;
+        }
+
+        .self-intro{
+            max-width: 650px;
+            margin: 30px auto 30px auto;
+            font-size: 16px;
+        }
+
+        p{
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .tldr{
+            @media (max-width: 1100px){
+                width: 70%;
+            }
+
+            @media (max-width: 600px){
+                padding: 30px 0 30px 0;
+            }
+
+            @media (max-width: 480px){
+                width: 90%;
+            }
+
+            @media (max-width: 360px){
+                width: 95%;
+                padding: 20px 0 20px 0;
+                height: 180px;
+            }
+
+            width: 50%;
+            background-color: $grayishBrown;
+            color: #555;
+            text-align: center;
+            margin: 0 auto 0 auto;
+            padding: 20px;
+            height: 200px;
+            max-width: 650px;
+
+            
+            &__proc{
+                width: 30%;
+                display: inline-block;
+                vertical-align: top;
+                font-size: 18px;
+
+                @media (max-width: 350px){
+                    font-size: 12px;
+                }
+
+            }
+
+            .aboutIcons{
+                width: 30px;
+                height: 30px;
+                margin: 0 auto 10px auto;
+            }
+
+            h3{
+                font-weight: 300;
+                font-size: 22px;
+                margin-top: 0px;
+                margin-bottom: 40px;
+                color: #111;
+
+                @media (max-width: 990px){
+                    font-size: 15px;
+                }
+
+                @media (max-width: 770px){
+                    font-size: 15px;
+                }
+
+            }
+
+            h6{
+                @media (max-width: 600px){
+                    font-size: 11px;
+                }
+
+                font-weight: 300;
+                font-family: 'Roboto Slab',sans-serif;
+                text-transform: capitalize;
+                letter-spacing: 0.5px;
+                margin-top: 0px;
+                margin-bottom: 1.875rem;
+            }
+
+        }
+        
+    }
+    
+    &__photo{
+        border-radius: 50%;
+        width: 140px;
+        height: 150px;
+    }
+
+    //What i do style
+    &__engagement{
+        @media (max-width: 63.9375em){
+            display: grid;
+
+            grid-template-rows: auto;
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            "title" 
+            "development" 
+            "design" 
+            "involvement";
+
+            .title{
+                grid-area: title;
+                margin-bottom: 3.4375‬rem;
+            }   
+    
+            .development{
+                grid-area: development;
+            }
+    
+            .design{
+                grid-area: design;
+            }
+    
+            .involvement{
+                grid-area: involvement;
+            }
+    
+        }
+
+        display: grid;
+
+        background-color: $grayishBrown;
+        justify-content: center;
+        justify-items: center;
+        text-align: center;
+        color: $black;
+        grid-template-columns: 4fr 4fr 4fr;
+        grid-template-rows: 0.25fr auto;
+        grid-template-areas: 
+        "title title title"
+        "development design involvement";
+
+        .title{
+            grid-area: title;
+            margin-top: 4.375rem;
+            margin-bottom: 3.4375rem;
+        }   
+
+        .development{
+            grid-area: development;
+        }
+
+        .design{
+            grid-area: design;
+        }
+
+        .involvement{
+            grid-area: involvement;
+        }
+
+        .engageIcons{
+            height: 150px;
+            width: 150px;
+        }
+
+        svg:hover .cogSmall{
+            animation-play-state: running;
+            animation-iteration-count: 1;
+        }
+    }
+
+    //technologies
+    &__experience{
+        @media (max-width: 39.9375em){
+            display: grid;
+
+            grid-template-rows: auto;
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            "text1"
+            "text2" 
+            "technologies" 
+            "worked";
+
+            .text1{
+                grid-area: text1;
+            }
+    
+            .text2{
+                grid-area: text2;
+            }
+    
+            .technologies{
+                grid-area: technologies;
+            }
+    
+            .worked{
+                grid-area: worked;
+            }
+
+        }
+
+        display: grid;
+        color: $black;
+        justify-items: center;
+        text-align: center;
+        grid-template-columns: 5fr 3fr;
+        grid-template-rows: 0.5fr 0.5fr auto ;
+        grid-template-areas: 
+        "text1 text1"
+        "text2 text2" 
+        "technologies worked";
+
+        .text1{
+            grid-area: text1;
+            margin-top: 4.375rem;
+            margin-bottom: 3.4375rem;
+        }
+
+        .text2{
+            grid-area: text2;
+        }
+
+        .technologies{
+            grid-area: technologies;
+            max-width: 550px;
+        }
+
+        .worked{
+            grid-area: worked;
+
+            &__image{
+                height: 80px;
+                width: 100px;
+            }
+        }
+
+        .techicons{
+            @media (max-width: 31.25em){
+                width: 40px;
+                height: 40px;
+                margin: 10px;
+            }
+            
+            width: 50px;
+            height: 50px;
+            margin: 15px;
+            position: relative;
+            cursor: pointer;
+            filter: grayscale(100%);
+
+        }
+
+        .techicons:hover{
+            filter: none;
+            filter: grayscale(0);
+        }
+
+    }
+
+    .resume{
+        color: $white;
+        background-image: url('/images/resume.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.9;
+        margin-top: 1.875rem;
+        margin-bottom: 1.875rem;
+        min-height: 260px;
+
+        &__layover{
+            background-image: linear-gradient($deepBrownopc, $darkBrownopc);
+            min-height: 260px;
+            text-align: center;
+
+            p{
+                padding-top: 5.625rem;
+            }
+
+            button{
+                height: 2.5rem;
+                width: 9.375rem;
+                margin-top: 0.625rem;
+                background-color: $white;
+                opacity: 0.8;
+                background-repeat: no-repeat;
+                border: solid 2px $black;
+                cursor: pointer;
+                outline: none;
+            }
+        }
+    }
+
+    .project{
+        display: grid;
+
+        color: $black;
+        text-align: center;
+
+        &__work{
+            margin-top: 7.5rem;
+            margin-bottom: 7.5rem;
+        }
+
+        h4{
+            margin-top: 4.375rem;
+            margin-bottom: 3.4375rem;
+        }
+        
+    }
+    
+    .getintouch{
+        display: grid;
+        background-color: $grayishBrown;
+
+        &__content{
+            color: $black;
+            text-align: center;
+
+            .orgamiplane{
+                margin-top: 1.875rem;
+                height: 50px;
+                width: 50px;
+            }
+
+            button{
+                height: 2.5rem;
+                width: 9.375rem;
+                margin-top: 0.625rem;
+                margin-bottom: 1.875rem;
+                background-color: $white;
+                opacity: 0.9;
+                background-repeat: no-repeat;
+                border: solid 2px $black;
+                cursor: pointer;
+                outline: none;
+            }
+        }
+    }
+}
+
